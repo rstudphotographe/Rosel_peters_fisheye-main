@@ -363,11 +363,12 @@ template {
 }
 
 .info_photograph {
-  display: block;
+  margin: 0 20px;
+  padding: 55px 10px;
 }
 
 .name {
-  font-size: 64px;
+  font-size: 44px;
   color: #D3573C;
 }
 
