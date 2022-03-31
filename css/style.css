@@ -365,6 +365,9 @@ template {
 .info_photograph {
   margin: 0 20px;
   padding: 55px 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .name {
