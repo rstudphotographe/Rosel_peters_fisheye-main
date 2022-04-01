@@ -354,14 +354,6 @@ template {
   background-color: #f0f2f8;
 }
 
-.container_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .info_photograph {
   margin: 0 20px;
   padding: 55px 10px;
@@ -371,8 +363,12 @@ template {
 }
 
 .name {
-  font-size: 44px;
+  font-size: 38px;
   color: #D3573C;
+  font-weight: 500;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .city_photographer {
@@ -383,17 +379,23 @@ template {
 .img_photographer {
   border-radius: 100px;
   border: 2px solid;
-  margin: 55px 250px;
+  margin: 55px 120px;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 200px;
-  width: 230px;
+  height: 180px;
+  width: 185px;
 }
 
 .container_menu_deroulant {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.try_asset {
+  margin: 10px 70px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .menu_deroulant {
@@ -428,7 +430,7 @@ template {
   font-weight: bold;
   color: white;
   padding: 11px;
-  width: 170px;
+  width: 200px;
   height: 70px;
   border: none;
   background-color: #901C1C;
@@ -436,7 +438,7 @@ template {
   cursor: pointer;
   position: relative;
   margin-top: 130px;
-  margin-left: 250px;
+  margin-left: 149px;
 }
 
 .container_info {
@@ -455,6 +457,10 @@ template {
 .img_gallery {
   width: 284px;
   height: 260px;
+}
+
+.asset_photographer {
+  width: 300px;
 }
 
 .container_like {

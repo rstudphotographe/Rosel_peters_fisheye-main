@@ -111,9 +111,16 @@ background-color: #901C1C;
     width: 284px;
     height: 260px;
 }
+.asset_photographer {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+}
 .container_like{
     display: block;
 }
+
+//*********************MODAL*******************************************
 .modal {
     border-radius: 5px;
     background-color: #DB8876;

@@ -116,6 +116,13 @@
   height: 260px;
 }
 
+.asset_photographer {
+  width: 350px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .container_like {
   display: block;
 }
