@@ -349,6 +349,9 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 300px;
   margin: 0 70px;
   background-color: #f0f2f8;
@@ -379,11 +382,11 @@ template {
 .img_photographer {
   border-radius: 100px;
   border: 2px solid;
-  margin: 55px 120px;
+  margin: 65px;
   -o-object-fit: cover;
      object-fit: cover;
   height: 180px;
-  width: 185px;
+  width: 180px;
 }
 
 .container_menu_deroulant {
@@ -396,6 +399,66 @@ template {
   margin: 10px 70px;
   font-size: 20px;
   font-weight: bold;
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  width: 25%;
+  text-align: center;
+}
+
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0;
+}
+
+nav a:hover {
+  border-bottom: 2px solid;
+}
+
+.sous {
+  display: none;
+  background-color: white;
+}
+
+nav > ul li:hover .sous {
+  display: block;
+}
+
+.sous {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sous a {
+  padding: 10px;
+  border-bottom: none;
+}
+
+.sous a:hover {
+  border-bottom: none;
+  background-color: #901C1C;
 }
 
 .menu_deroulant {
@@ -452,6 +515,7 @@ template {
       grid-template-columns: 1fr 1fr 1fr;
   margin-left: 70px;
   margin-top: 50px;
+  height: 850px;
 }
 
 .img_gallery {
@@ -460,11 +524,53 @@ template {
 }
 
 .asset_photographer {
-  width: 300px;
+  width: 350px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+.info_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container_like {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 50px;
+  width: 54px;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+}
+
+.title_media {
+  color: #901C1C;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.number_like {
+  color: #901C1C;
+  font-weight: bold;
+}
+
+.fa-heart {
+  color: #901C1C;
 }
 
 .modal {

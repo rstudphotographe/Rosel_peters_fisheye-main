@@ -1,58 +1,52 @@
-// recuperer et stocker les medias du photographe
 
 // création d'une class pour récupérer les medias de chaque photographe
-class dataMedia {
-    constructor(medias, photographers){
-        this.title = medias.title
-        this.image = medias.image
-        this.like = medias.like
-    }
-    get title(){
-        return this.title
-    }
-    get image (){
-        return this.image
-    }
-    get like () {
-        return this.like
-    }
-}
 
-
-//const displayMediaPhotographe = () => (
-    //gallery.innerHTML =  `
-    //  <article>
-    //    <img class="img_gallery" src="${this.image}" alt="">
-    //  <div class="info_image">
-    //    <span class ="title_image">${this.title}</span>
-    //  <span class = "like_image">${this.like}</span>
-    //</div>
-    //</article>`
-    //)
-    //displayMediaPhotographe()
-    const getThisMedias = () => {
-        medias.forEach((media) => {
-            if(media.photographerId == currentId){
-                thisMedias.push(media);
-            }
-        })
+class Media {
+  constructor(urlmedias, urlPhotographer){
+    this.media = urlmedias;
+    this.urlPhotographer = urlPhotographer;
+    this.htmlContent = document.querySelector(".container_gallery");
+    console.log(this.urlPhotographer.name);
+    this.thumbs = `assets/images/Sample_Photos/${this.urlPhotographer.name.split(" ")[0]}/`;
+    console.log(this.thumbs);
+    
+    if (this.media.image) {
+      console.log(this.image);
+      this.image();
+    } else if (this.media.video) {
+      this.video();
     }
-    getThisMedias();
+  }
+  
+  // affichage page html
+  creationGallery()  {
+    this.htmlContent.insertAdjacentHTML('afterbegin',
+      `<article>
+       <div class = "card_media">  
+       <img src="${this.thumbs}
+        alt=""/>  
+        <div class="info_media">
+          <span class = "title_media">${this.media.title}</span>
+          <div class= "container_like">
+            <p class = "number_like">${this.media.likes}</p>
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+        </div>
+      </article>`)
+    }
+    
+    
+    image() {
+      this.image = `<a href="${this.thumbs}${this.media.image}"><img src= "${this.thumbs}${this.media.image}" alt="${this.media.title}"/></a>`;
+      this.creationGallery(this.image);
+    }
+  
+    video() {
+      this.video = `<a href="${this.thumbs}${this.media.video}"><video src= "${this.thumbs}${this.media.video}" alt="${this.media.title}"/></a>`;
+      this.creationGallery(this.video);
+    }
+  }
 
-    //recupération et création html
-    const gallery = document.querySelector ('.container_gallery')
-
-const displayMediaPhotographe = () => {
-    gallery.innerHTML = thisListOfMedias.map(media =>
-         `
-        <article>
-            <img class="media" src='assets/images/Sample_Photos/${thisPhotographer[0].name.split(' ')[0]}/${media.image}'style="width : 300px"/>            
-            <div>
-                <span>${media.title}</span>
-                <span>${media.likes} <i class="fas fa-heart"></i></span>
-            </div>
-        </article>
-
-    `).join('');
-}
-displayMediaPhotographe()
+  
+  console.log('essaie console log');
