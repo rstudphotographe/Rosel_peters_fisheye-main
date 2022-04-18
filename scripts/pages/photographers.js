@@ -10,6 +10,9 @@ const {photographers, medias} = await getDataPhotographers();
 //recuperer les données d'un photographe 
 const onePhotographe = photographers.filter(photographer => currentId === photographer.id)[0];
 
+//recuperer les medias d'un photographe
+const allMediaPhotographer = medias.filter(media => currentId === media.photographerId)
+// console.log(allMediaPhotographer);
 //variable pour sélectionner un element html
 const infophotographe = document.querySelector(".photograph-header");
 
@@ -27,17 +30,24 @@ const displayPhotographerInfo = () => {
 }
 displayPhotographerInfo()
 
-// active la factory des médias
-const allMedia = new Media(medias, onePhotographe)
+// active la factory des médias dans media.js
+const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
-const getThisMedias = () => {
-  medias.forEach(media => {
-      if(media.photographerId == currentId){
-          medias.push(media);          
-      }
-  });
-};
-getThisMedias();
+
+// console.log(allMediaPhotographer);
+
+
+
+
+
+// const getThisMedias = () => {
+//   medias.forEach(media => {
+//       if(media.photographerId == currentId){
+//           medias.push(media);          
+//       }
+//   });
+// };
+// getThisMedias();
 
 //recupération et création html
 //const gallery = document.querySelector ('.container_gallery')

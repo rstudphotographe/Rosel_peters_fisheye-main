@@ -518,14 +518,9 @@ nav > ul li:hover .sous {
   height: 850px;
 }
 
-.img_gallery {
-  width: 284px;
-  height: 260px;
-}
-
 .asset_photographer {
-  width: 350px;
-  height: 300px;
+  width: 50px;
+  height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
