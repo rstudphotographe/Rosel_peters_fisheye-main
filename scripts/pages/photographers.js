@@ -30,11 +30,9 @@ const displayPhotographerInfo = () => {
 }
 displayPhotographerInfo()
 
-// active la factory des médias dans media.js
+// active la factory des médias dans media.js pour afficher dans le fichier html
 const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
-
-// console.log(allMediaPhotographer);
 
 
 

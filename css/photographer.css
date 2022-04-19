@@ -2,6 +2,10 @@
   display: none;
 }
 
+.logo {
+  margin-left: 35px;
+}
+
 .photograph-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,8 +14,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 300px;
-  margin: 0 70px;
+  margin: 0 31px;
   background-color: #f0f2f8;
+  width: 94%;
 }
 
 .info_photograph {
@@ -53,7 +58,7 @@
 }
 
 .try_asset {
-  margin: 10px 70px;
+  margin: 10px 35px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -150,7 +155,7 @@ nav > ul li:hover .sous {
   font-weight: bold;
   color: white;
   padding: 11px;
-  width: 200px;
+  width: 170px;
   height: 70px;
   border: none;
   background-color: #901C1C;
@@ -158,7 +163,7 @@ nav > ul li:hover .sous {
   cursor: pointer;
   position: relative;
   margin-top: 130px;
-  margin-left: 149px;
+  margin-left: 50px;
 }
 
 .container_info {
@@ -170,14 +175,14 @@ nav > ul li:hover .sous {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 70px;
+  margin-left: 40px;
   margin-top: 50px;
   height: 850px;
 }
 
 .asset_photographer {
-  width: 350px;
-  height: 300px;
+  width: 300px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -194,6 +199,7 @@ nav > ul li:hover .sous {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: -25px;
 }
 
 .container_like {
@@ -203,8 +209,8 @@ nav > ul li:hover .sous {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 50px;
-  width: 54px;
+  margin: 0 35px;
+  width: 45px;
   -webkit-box-pack: inherit;
       -ms-flex-pack: inherit;
           justify-content: inherit;
@@ -212,13 +218,14 @@ nav > ul li:hover .sous {
 
 .title_media {
   color: #901C1C;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 
 .number_like {
   color: #901C1C;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .fa-heart {
