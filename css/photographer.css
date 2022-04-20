@@ -64,90 +64,63 @@
 }
 
 nav {
-  width: 100%;
-  margin: 0 auto;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  background-color: #901C1C;
+  border-radius: 5px;
+  margin: 5px;
 }
 
-nav ul {
-  list-style-type: none;
+nav > ul {
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  width: 25%;
-  text-align: center;
-}
-
-nav ul::after {
+nav > ul::after {
   content: "";
-  display: table;
+  display: block;
   clear: both;
 }
 
-nav a {
-  display: block;
-  text-decoration: none;
+nav > ul > li > a {
+  padding: 20px 15px;
   color: white;
-  border-bottom: 2px solid transparent;
-  padding: 10px 0;
+  width: 120px;
 }
 
-nav a:hover {
-  border-bottom: 2px solid;
+nav li {
+  list-style-type: none;
 }
 
-.sous {
+.sous_menu {
   display: none;
-  background-color: white;
 }
 
-nav > ul li:hover .sous {
+nav a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+nav li:hover .sous_menu {
   display: block;
+  position: absolute;
+  top: 64%;
+  left: 187px;
+  padding: 0px;
+  z-index: 1000;
 }
 
-.sous {
-  float: none;
-  width: 100%;
-  text-align: left;
+.sous_menu li {
+  border-bottom: 1 solid white;
 }
 
-.sous a {
-  padding: 10px;
-  border-bottom: none;
-}
-
-.sous a:hover {
-  border-bottom: none;
-  background-color: #901C1C;
-}
-
-.menu_deroulant {
-  margin: 0 50px;
-}
-
-.deroulant {
-  font-size: 20px;
-  font-weight: bold;
+.sous_menu li a {
+  margin: 0px -35px;
+  padding: 15px;
+  font-size: 16px;
   color: white;
-  padding: 11px;
-  width: 170px;
-  height: 70px;
-  border: none;
+  width: 120px;
   background-color: #901C1C;
-}
-
-.mini_deroulant {
-  margin: 0 -11px;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  padding: 11px;
-  width: 170px;
-  height: 70px;
-  border: none;
-  background-color: #901C1C;
+  border-top: 1px solid white;
+  border-radius: 0 0 5px 5px;
 }
 
 .contact_button {
@@ -230,6 +203,60 @@ nav > ul li:hover .sous {
 
 .fa-heart {
   color: #901C1C;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1001;
+}
+
+.lightbox_next,
+.lightbox_prev {
+  background-color: transparent;
+  color: #901C1C;
+  border: none;
+  font-size: 25px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  margin-top: -16px;
+  z-index: 1002;
+  width: 40px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.lightbox_prev {
+  left: auto;
+  right: 0;
+}
+
+.lightbox_bloc {
+  position: relative;
+  width: 2010px;
+  top: 50px;
+  background-color: transparent;
+  color: #901C1C;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.container_lightbox img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container_lightbox {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: 100vh;
 }
 
 .modal {

@@ -30,10 +30,10 @@ const displayPhotographerInfo = () => {
 }
 displayPhotographerInfo()
 
-// active la factory des médias dans media.js pour afficher dans le fichier html
+// active la factory des médias dans media.js pour afficher les photos
 const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
-
+//Créer les functions pour trier la gallerie
 
 
 
