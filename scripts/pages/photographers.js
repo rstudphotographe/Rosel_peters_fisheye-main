@@ -49,7 +49,7 @@ class lightbox {
     } ))
   }
   
-  //
+  //Va afficher le contenu html
   constructor(url) {
     const element = this.creatDom(url)
     document.body.appendChild(element)

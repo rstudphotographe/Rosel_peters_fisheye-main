@@ -27,8 +27,13 @@ export function photographerFactory(data) {
         article.appendChild(h4);
 
         const span = document.createElement ('span')
-        span.textContent = price;
+        span.textContent = price ;
         article.appendChild(span);
+
+        const day = document.createElement ('h6')
+        day.classList.add('day')
+        day.textContent = "/jour";
+        article.appendChild(day)
         
         return (article);
     }
