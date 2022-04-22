@@ -33,6 +33,48 @@ displayPhotographerInfo()
 // active la factory des médias dans media.js pour afficher les photos
 const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
+//---------------------------------------------------------------------------\\
+//*********************************lightbox ************************************\\
+
+class lightbox {
+  static init () {
+    //recupere le lien de chaque média
+    const link = document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4}') 
+      .forEach(link => link.addEventListener('click', e => 
+    {
+      e.preventDefault()
+      new lightbox(e.currentTarget.getAttribute('href')
+      
+      )
+    } ))
+  }
+  
+  //
+  constructor(url) {
+    const element = this.creatDom(url)
+    document.body.appendChild(element)
+    
+  }
+  
+  //creation de le structure html de la lightbox
+  
+  creatDom(url) {
+    const dom = document.createElement ('div')
+    dom.classList.add('lightbox')
+    dom.innerHTML = `
+    <button class="lightbox_bloc"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox_next"><i class="fa-solid fa-angle-left"></i></button>
+    <button class="lightbox_prev"><i class="fa-solid fa-angle-right"></i></button>
+    <div class="container_lightbox">
+    <img src="${url}" alt="">
+    </div>`
+    console.log(url);
+    return dom
+  }
+}
+
+lightbox.init();
+
 //Créer les functions pour trier la gallerie
 
 
