@@ -12,7 +12,7 @@ const onePhotographe = photographers.filter(photographer => currentId === photog
 
 //recuperer les medias d'un photographe
 const allMediaPhotographer = medias.filter(media => currentId === media.photographerId)
-// console.log(allMediaPhotographer);
+
 //variable pour sélectionner un element html
 const infophotographe = document.querySelector(".photograph-header");
 
@@ -25,7 +25,7 @@ const displayPhotographerInfo = () => {
       <p class="tag_photographer">${onePhotographe.tagline}</p>
     </div>
       <button class="contact_button" id="contact" onclick="displayModal()">Contactez-moi</button>
-      <img class="img_photographer" src="assets/Photographers/Photographers_ID_Photos/${onePhotographe.portrait}" alt="photo du photographe">
+      <img class="img_photographer" src="assets/Photographers/Photographers_ID_Photos/${onePhotographe.portrait}" alt="${onePhotographe.name}">
       ` 
 }
 displayPhotographerInfo()
@@ -57,7 +57,7 @@ class lightbox {
   }
   
   //creation de le structure html de la lightbox
-  
+
   creatDom(url) {
     const dom = document.createElement ('div')
     dom.classList.add('lightbox')
