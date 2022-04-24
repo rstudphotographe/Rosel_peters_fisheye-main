@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 
 #contact_modal {
     display: none;
@@ -40,6 +44,7 @@
     height: 180px;
     width: 180px;
 }
+//*************************************************************************************
 //******************************menu deroulant*****************************************
 .container_menu_deroulant {
     display: flex;
@@ -49,64 +54,54 @@
     font-size: 20px;
     font-weight: bold;
 }
- nav {
-     background-color: #901C1C;
-     border-radius: 5px;
-    margin: 5px;
+.menu_deroulant {
+    background-color: #901C1C;
+    list-style: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
  }
-nav > ul {
-    margin: 0;
-    padding: 0;
+.menu_deroulant li {
+    float: left;
+    width: 115px;
 }
 
-nav > ul::after {
-    content: "";
+.menu_deroulant li a:link .menu_deroulant li a:visited {
     display: block;
-    clear: both;
-}
-
-nav > ul > li > a {
-    padding: 20px 15px;
     color: white;
-    width: 120px;
-}
-nav li {
-    list-style-type: none;
-}
-
-.sous_menu {
-    display: none;
-}
-
-nav a {
-    display: inline-block;
+    background-color: #901C1C;
+    padding: 6px 10px;
+    text-align: center;
     text-decoration: none;
 }
 
-nav li:hover .sous_menu {
-    display: block;
+
+.menu_deroulant li a:hover{
+background-color: #7d2815;
+}
+.menu_deroulant .sous_menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     position: absolute;
-    top: 64%;
-    left: 187px;
-    padding: 0px;
-    z-index: 1000;
 }
 
-.sous_menu li {
-    border-bottom: 1 solid white;
-}
-
-.sous_menu li a {
-    margin:0px -35px;
-    padding: 15px;
-    font-size: 16px;
+.menu_deroulant .sous_menu li {
+    float: none;
+    margin: 0;
+    padding: 0;
     color: white;
-    width: 120px;
-    background-color: #901C1C;
-    border-top: 1px solid white;
-    border-radius: 0 0 5px 5px;
+    background-color:#7d2815;
+    
 }
 
+.menu_deroulant li:hover .sous_menu {
+    display: block;
+}
+
+a {
+    color: white;
+}
 //*****************bouton contact**********************
 .contact_button {
     font-size: 20px;
@@ -130,7 +125,7 @@ nav li:hover .sous_menu {
 
 
 
-//GALLERIE PHOTO*********************************
+//************************GALLERIE PHOTO*********************************
 
 .container_gallery {
   display: grid;
@@ -293,3 +288,19 @@ form input {
     border-radius: 5px;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    height: 60px;
+    width: 376px;
+    background-color: #db8876;
+    font-size: 24px;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    display: flex;
+    z-index: 15;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+}

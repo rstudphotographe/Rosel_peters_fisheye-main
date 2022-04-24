@@ -406,64 +406,48 @@ template {
   font-weight: bold;
 }
 
-nav {
+.menu_deroulant {
   background-color: #901C1C;
+  list-style: none;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
 }
 
-nav > ul {
-  margin: 0;
+.menu_deroulant li {
+  float: left;
   padding: 0;
 }
 
-nav > ul::after {
-  content: "";
+.menu_deroulant li a:link .menu_deroulant li a:visited {
   display: block;
-  clear: both;
-}
-
-nav > ul > li > a {
-  padding: 20px 15px;
   color: white;
-  width: 120px;
-}
-
-nav li {
-  list-style-type: none;
-}
-
-.sous_menu {
-  display: none;
-}
-
-nav a {
-  display: inline-block;
+  background-color: #901C1C;
+  padding: 6px 10px;
+  text-align: center;
   text-decoration: none;
 }
 
-nav li:hover .sous_menu {
-  display: block;
+.menu_deroulant li a:active {
+  background-color: #7d2815;
+}
+
+.menu_deroulant .sous_menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  top: 64%;
-  left: 187px;
-  padding: 0px;
-  z-index: 1000;
 }
 
-.sous_menu li {
-  border-bottom: 1 solid white;
+.menu_deroulant .sous_menu li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  background-color: 1px solid green;
+  border-right: 1px solid yellow;
 }
 
-.sous_menu li a {
-  margin: 0px -35px;
-  padding: 15px;
-  font-size: 16px;
-  color: white;
-  width: 120px;
-  background-color: #901C1C;
-  border-top: 1px solid white;
-  border-radius: 0 0 5px 5px;
+.menu_deroulant li:hover .sous_menu {
+  display: block;
 }
 
 .contact_button {

@@ -33,13 +33,13 @@ displayPhotographerInfo()
 // active la factory des médias dans media.js pour afficher les photos
 const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
-//---------------------------------------------------------------------------\\
+//-------------------------------**-------**-----------------------------------\\
 //*********************************lightbox ************************************\\
 
 class lightbox {
   static init () {
     //recupere le lien de chaque média
-    const link = document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4}') 
+    const linkMedia = document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]') 
       .forEach(link => link.addEventListener('click', e => 
     {
       e.preventDefault()
@@ -49,16 +49,17 @@ class lightbox {
     } ))
   }
   
-  //Va afficher le contenu html
-  constructor(url) {
-    const element = this.creatDom(url)
+  //Va afficher le contenu de la lightbox
+  constructor(urlMedia) {
+    const element = this.creatDom(urlMedia)
     document.body.appendChild(element)
     
+    console.log(urlMedia);
   }
   
   //creation de le structure html de la lightbox
 
-  creatDom(url) {
+  creatDom(urlMedia) {
     const dom = document.createElement ('div')
     dom.classList.add('lightbox')
     dom.innerHTML = `
@@ -66,9 +67,8 @@ class lightbox {
     <button class="lightbox_next"><i class="fa-solid fa-angle-left"></i></button>
     <button class="lightbox_prev"><i class="fa-solid fa-angle-right"></i></button>
     <div class="container_lightbox">
-    <img src="${url}" alt="">
+    <img src="${urlMedia}" alt="">
     </div>`
-    console.log(url);
     return dom
   }
 }
