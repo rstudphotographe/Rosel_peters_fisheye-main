@@ -1,12 +1,12 @@
 import { photographerFactory } from "../factories/photographer.js";
 import getPhotographers from "./service.js";
 
-// Données récupérées dans le json avec une fonction asynchron 
+// Données récupérées dans le json avec une fonction asynchrone 
 const getMedia = [];
 const thisPhotographer = [];
 
 
-//selectionne chaque photophe
+//selectionne chaque photographe
  async function displayData() {
     const {photographers} = await getPhotographers();
     const photographersSection = document.querySelector(".photographer_section");

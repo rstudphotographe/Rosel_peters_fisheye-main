@@ -399,7 +399,7 @@ body {
   width: 180px;
 }
 
-.container_menu_deroulant {
+.dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,13 +412,29 @@ body {
 }
 
 .menu_deroulant {
-  position: relative;
+  position: absolute;
   background-color: #901C1C;
   list-style: none;
   border-radius: 5px;
   margin: 10px;
   padding: 15px;
   display: inline-block;
+  color: white;
+  z-index: 1002;
+}
+
+.menu:hover {
+  width: 100px;
+}
+
+.menu_deroulant a {
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
 }
 
 .sous_menu {
@@ -429,7 +445,8 @@ body {
 .sous_menu a {
   color: white;
   padding: 20px;
-  text-decoration: none;
+  margin: 11px -60px;
+  border-top: 1px solid white;
   display: block;
 }
 

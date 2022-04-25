@@ -13,6 +13,10 @@ const onePhotographe = photographers.filter(photographer => currentId === photog
 //recuperer les medias d'un photographe
 const allMediaPhotographer = medias.filter(media => currentId === media.photographerId)
 
+
+//*****************************************************************************************************/
+//********************************Header du photographe********************************************* */
+
 //variable pour sélectionner un element html
 const infophotographe = document.querySelector(".photograph-header");
 
@@ -30,11 +34,34 @@ const displayPhotographerInfo = () => {
 }
 displayPhotographerInfo()
 
+//*******************************************************************************************************************************************************//
+
 // active la factory des médias dans media.js pour afficher les photos
 const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
-//-------------------------------**-------**-----------------------------------\\
-//*********************************lightbox ************************************\\
+
+//**************************TRI de la gallerie***********************//
+//tri par popularité
+
+const tryPopular = document.querySelector('.popular');
+
+tryPopular.addEventListener("click", try_popular)
+function try_popular() {
+  medias.sort(function(a, b){
+    if (a.likes < b.likes){
+      console.log(a.likes);
+      return -1
+    }
+    else {
+      return +1
+    }
+  })
+}
+        
+
+//-------------------------------**--------**-----------------------------------\\
+//*********************************lightbox**************************************\\
+
 
 class lightbox {
   static init () {
@@ -49,7 +76,7 @@ class lightbox {
     } ))
   }
   
-  //Va afficher le contenu de la lightbox
+  //                         Affiche le contenu de la lightbox
   constructor(urlMedia) {
     const element = this.creatDom(urlMedia)
     document.body.appendChild(element)
@@ -58,8 +85,8 @@ class lightbox {
   }
   
   //creation de le structure html de la lightbox
-
-  creatDom(urlMedia) {
+  
+  creatDom(link) {
     const dom = document.createElement ('div')
     dom.classList.add('lightbox')
     dom.innerHTML = `
@@ -67,14 +94,17 @@ class lightbox {
     <button class="lightbox_next"><i class="fa-solid fa-angle-left"></i></button>
     <button class="lightbox_prev"><i class="fa-solid fa-angle-right"></i></button>
     <div class="container_lightbox">
-    <img src="${urlMedia}" alt="">
+        <img src="${link}" alt="">
     </div>`
     return dom
   }
+  
 }
 
 lightbox.init();
 
+const lightClose = document.querySelector("lightbox_bloc");
+const lgtBoxForm = document.querySelector("lightbox")
 //Créer les functions pour trier la gallerie
 
 
@@ -98,7 +128,7 @@ lightbox.init();
     //  <img class="asset_photographer" src='assets/images/Sample_Photos/${thisPhotographer[0].name.split(' ')[0]}/${media.image}'/>            
       //<div class="info_media">
         //  <span class = "title_media">${media.title}</span>
-          //<div class= "container_like">
+        //<div class= "container_like">
             //   <p class = "number_like"> ${media.likes}</p>
               //  <i class="fas fa-heart"></i>
           //</div>
@@ -107,4 +137,4 @@ lightbox.init();
 
 //`).join('');
 //}
-//displayMediaPhotographe();
+//displayMediaPhotographe()
