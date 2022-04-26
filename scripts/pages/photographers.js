@@ -36,7 +36,7 @@ displayPhotographerInfo()
 
 //*******************************************************************************************************************************************************//
 
-// active la factory des médias dans media.js pour afficher les photos
+// active la factory des médias dans media.js pour afficher les photos pour chaque photographe
 const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
 
@@ -46,18 +46,23 @@ const allMedia = new Media(allMediaPhotographer, onePhotographe)
 const tryPopular = document.querySelector('.popular');
 
 tryPopular.addEventListener("click", try_popular)
-function try_popular() {
-  medias.sort(function(a, b){
-    if (a.likes < b.likes){
-      console.log(a.likes);
-      return -1
-    }
-    else {
-      return +1
-    }
-  })
-}
-        
+function try_popular(e) {
+  e.preventDefault();
+   allMediaPhotographer.sort(function(a, b){ 
+     if (a.likes < b.likes){
+       return -1
+      }
+      else {
+        return +1
+      }
+    })
+    // vide la pâge des anciens médias
+    document.querySelector('.container_gallery').innerHTML = '';
+    // affiche les medias avec le tri effectuer
+    new Media(allMediaPhotographer, onePhotographe)
+  }
+  console.log(allMediaPhotographer);
+
 
 //-------------------------------**--------**-----------------------------------\\
 //*********************************lightbox**************************************\\
@@ -67,12 +72,10 @@ class lightbox {
   static init () {
     //recupere le lien de chaque média
     const linkMedia = document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]') 
-      .forEach(link => link.addEventListener('click', e => 
-    {
-      e.preventDefault()
-      new lightbox(e.currentTarget.getAttribute('href')
-      
-      )
+      .forEach(link => link.addEventListener('click', e => {
+        e.preventDefault()
+      new lightbox(e.currentTarget.getAttribute('href') );
+
     } ))
   }
   

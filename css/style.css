@@ -420,10 +420,10 @@ body {
   padding: 15px;
   display: inline-block;
   color: white;
-  z-index: 1002;
+  z-index: 1001;
 }
 
-.menu:hover {
+.menu_deroulant:hover {
   width: 100px;
 }
 
@@ -569,7 +569,7 @@ li {
 
 .lightbox_bloc {
   position: relative;
-  width: 2010px;
+  width: 1700px;
   top: 50px;
   background-color: transparent;
   color: #901C1C;
