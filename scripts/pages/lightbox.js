@@ -10,16 +10,23 @@ export class Lightbox {
     }
     
     //                         Affiche le contenu de la lightbox
-    constructor(urlMedia) {
-      const element = this.creatDom(urlMedia)
+    constructor(url) {
+      const element = this.creatDom(url)
       document.body.appendChild(element)
       
-      console.log(urlMedia);
+      console.log(url);
     }
     
+    //ferme la lightbox
+    close(e) {
+      e.preventDefault()
+      this.element.classList.add('fadeout')
+      window.setTimeout(() => {
+        this.element.parentElement.removeChild(this.element)
+      }, 500)
+    }
     //creation de le structure html de la lightbox
-    
-    creatDom(link) {
+    creatDom(url) {
       const dom = document.createElement ('div')
       dom.classList.add('lightbox')
       dom.innerHTML = `
@@ -27,8 +34,9 @@ export class Lightbox {
       <button class="lightbox_next"><i class="fa-solid fa-angle-left"></i></button>
       <button class="lightbox_prev"><i class="fa-solid fa-angle-right"></i></button>
       <div class="container_lightbox">
-          <img src="${link}" alt="">
+          <img src="${url}" alt="">
       </div>`
+      dom.querySelector('.lightbox_bloc').addEventListener('click', this.close.bind(this))
       return dom
     }
     

@@ -182,7 +182,11 @@ li {
     height: 100%;
     background-color: white;
     z-index: 1001;
+    transition: opacity .3s;
+}
 
+.lightbox.fadeout {
+    opacity: 0;
 }
 
 .lightbox_next,
