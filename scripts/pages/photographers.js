@@ -1,4 +1,6 @@
+import { Lightbox } from "./lightbox.js";
 import getDataPhotographers from "./service.js";
+
 
 //recuperer et inserer l'id du photographe
 const currentId = Number(document.location.href.split("=")[1]);
@@ -24,8 +26,8 @@ const infophotographe = document.querySelector(".photograph-header");
 const displayPhotographerInfo = () => {
     infophotographe.innerHTML =  `
     <div class="info_photograph">
-      <h1 class="name">${onePhotographe.name}</h1>
-      <p class="city_photographer">${onePhotographe.city}, ${onePhotographe.country}</p>
+    <h1 class="name">${onePhotographe.name}</h1>
+    <p class="city_photographer">${onePhotographe.city}, ${onePhotographe.country}</p>
       <p class="tag_photographer">${onePhotographe.tagline}</p>
     </div>
       <button class="contact_button" id="contact" onclick="displayModal()">Contactez-moi</button>
@@ -71,17 +73,13 @@ function try_popular(e) {
     e.preventDefault();
     allMediaPhotographer.sort(function(a, b){
       if (a.date < b.date){
-
         return -1
       }
       else{
-
         return+1
       }
     })
-    
     document.querySelector('.container_gallery').innerHTML = '';
-  
     new Media(allMediaPhotographer, onePhotographe);
   }
 
@@ -93,64 +91,20 @@ const tryTitle = document.querySelector('.title_of_media');
     e.preventDefault();
     allMediaPhotographer.sort(function(a, b){
       if (a.title > b.title){
-
         return -1
       }
       else{
-
         return+1
       }
     })
-    
     document.querySelector('.container_gallery').innerHTML = '';
-  
     new Media(allMediaPhotographer, onePhotographe);
   }
-
-//-------------------------------**--------**-----------------------------------\\
-//*********************************lightbox**************************************\\
-
-
-class lightbox {
-  static init () {
-    //recupere le lien de chaque média
-    const linkMedia = document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]') 
-      .forEach(link => link.addEventListener('click', e => {
-        e.preventDefault()
-      new lightbox(e.currentTarget.getAttribute('href') );
-
-    } ))
-  }
   
-  //                         Affiche le contenu de la lightbox
-  constructor(urlMedia) {
-    const element = this.creatDom(urlMedia)
-    document.body.appendChild(element)
-    
-    console.log(urlMedia);
-  }
   
-  //creation de le structure html de la lightbox
   
-  creatDom(link) {
-    const dom = document.createElement ('div')
-    dom.classList.add('lightbox')
-    dom.innerHTML = `
-    <button class="lightbox_bloc"><i class="fa-solid fa-xmark"></i></button>
-    <button class="lightbox_next"><i class="fa-solid fa-angle-left"></i></button>
-    <button class="lightbox_prev"><i class="fa-solid fa-angle-right"></i></button>
-    <div class="container_lightbox">
-        <img src="${link}" alt="">
-    </div>`
-    return dom
-  }
   
-}
-
-lightbox.init();
-
-const lightClose = document.querySelector("lightbox_bloc");
-const lgtBoxForm = document.querySelector("lightbox")
+  Lightbox.init();
 //Créer les functions pour trier la gallerie
 
 
