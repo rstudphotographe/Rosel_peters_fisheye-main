@@ -45,7 +45,7 @@ const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
 const tryPopular = document.querySelector('.popular');
 
-tryPopular.addEventListener("click", try_popular)
+tryPopular.addEventListener("click", try_popular);
 function try_popular(e) {
   e.preventDefault();
    allMediaPhotographer.sort(function(a, b){ 
@@ -56,13 +56,56 @@ function try_popular(e) {
         return +1
       }
     })
-    // vide la pâge des anciens médias
+    // vide la page des anciens médias
     document.querySelector('.container_gallery').innerHTML = '';
     // affiche les medias avec le tri effectuer
-    new Media(allMediaPhotographer, onePhotographe)
+    new Media(allMediaPhotographer, onePhotographe);
   }
   console.log(allMediaPhotographer);
 
+  //********************************tri par date
+  const tryDate = document.querySelector('.date');
+
+  tryDate.addEventListener("click", try_date);
+  function try_date(e) {
+    e.preventDefault();
+    allMediaPhotographer.sort(function(a, b){
+      if (a.date < b.date){
+
+        return -1
+      }
+      else{
+
+        return+1
+      }
+    })
+    
+    document.querySelector('.container_gallery').innerHTML = '';
+  
+    new Media(allMediaPhotographer, onePhotographe);
+  }
+
+//***********************TRI par Titre************************ **/
+const tryTitle = document.querySelector('.title_of_media');
+
+  tryTitle.addEventListener("click", try_title);
+  function try_title(e) {
+    e.preventDefault();
+    allMediaPhotographer.sort(function(a, b){
+      if (a.title > b.title){
+
+        return -1
+      }
+      else{
+
+        return+1
+      }
+    })
+    
+    document.querySelector('.container_gallery').innerHTML = '';
+  
+    new Media(allMediaPhotographer, onePhotographe);
+  }
 
 //-------------------------------**--------**-----------------------------------\\
 //*********************************lightbox**************************************\\
