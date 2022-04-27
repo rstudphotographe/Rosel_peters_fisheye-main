@@ -11,8 +11,8 @@ export class Lightbox {
     
     //                         Affiche le contenu de la lightbox
     constructor(url) {
-      const element = this.creatDom(url)
-      document.body.appendChild(element)
+      this.element = this.creatDom(url)
+      document.body.appendChild(this.element)
       
       console.log(url);
     }
@@ -30,13 +30,13 @@ export class Lightbox {
       const dom = document.createElement ('div')
       dom.classList.add('lightbox')
       dom.innerHTML = `
-      <button class="lightbox_bloc"><i class="fa-solid fa-xmark"></i></button>
+      <button class="lightbox_bloc"><i class="fa-solid fa-xmark close_box"></i></button>
       <button class="lightbox_next"><i class="fa-solid fa-angle-left"></i></button>
       <button class="lightbox_prev"><i class="fa-solid fa-angle-right"></i></button>
       <div class="container_lightbox">
           <img src="${url}" alt="">
       </div>`
-      dom.querySelector('.lightbox_bloc').addEventListener('click', this.close.bind(this))
+      dom.querySelector('.close_box').addEventListener('click', this.close.bind(this))
       return dom
     }
     
