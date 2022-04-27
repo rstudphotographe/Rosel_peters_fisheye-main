@@ -213,7 +213,7 @@ cursor: pointer;
 
 .lightbox_bloc {
     position: relative;
-    width: 1700px;
+    width: 195%;
     top: 50px;
     background-color: transparent;
     color: #901C1C;
@@ -223,12 +223,19 @@ cursor: pointer;
 }
 
 .container_lightbox img {
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
 
 }
+
+.container_lightbox video {
+    max-width: 50%;
+    height: auto;
+}
 .container_lightbox {
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 50px ;
     margin-right: 50px;
     min-height: 100vh;

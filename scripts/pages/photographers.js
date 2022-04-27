@@ -63,7 +63,7 @@ function try_popular(e) {
     // affiche les medias avec le tri effectuer
     new Media(allMediaPhotographer, onePhotographe);
   }
-  console.log(allMediaPhotographer);
+  
 
   //********************************tri par date
   const tryDate = document.querySelector('.date');
@@ -105,7 +105,7 @@ const tryTitle = document.querySelector('.title_of_media');
   
   
   Lightbox.init();
-//Créer les functions pour trier la gallerie
+
 
 
 

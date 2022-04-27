@@ -232,7 +232,7 @@ li {
 
 .lightbox_bloc {
   position: relative;
-  width: 1700px;
+  width: 195%;
   top: 50px;
   background-color: transparent;
   color: #901C1C;
@@ -242,12 +242,25 @@ li {
 }
 
 .container_lightbox img {
+  max-width: 40%;
+  height: auto;
+}
+
+.container_lightbox video {
   max-width: 50%;
   height: auto;
 }
 
 .container_lightbox {
-  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: 50px;
   margin-right: 50px;
   min-height: 100vh;

@@ -4,7 +4,7 @@ class Media {
     this.medias = urlMedias;
     this.urlPhotographer = urlPhotographer;
     this.htmlContent = document.querySelector(".container_gallery");
-    this.thumbs = `assets/images/Sample_Photos/${this.urlPhotographer.name.split(" ")[0]}`;
+    this.thumbs = `assets/images/Sample_Photos/${this.urlPhotographer.name.split(" ")[0]}/`;
   
     this.medias.map(elt =>{
       if (elt.image) {
@@ -33,10 +33,11 @@ class Media {
     this.htmlContent.insertAdjacentHTML('afterbegin',
       `<article>
        ${lien_media_2}
-        <div class="info_media">
+        <div class="info_media" aria-label="vignette cliquable">
           <span class = "title_media">${lien_media.title}</span>
           <div class= "container_like">
-            <p class = "number_like">${lien_media.likes}</p>
+            <p class = "number_like"  
+            aria-label="Coeur pour aimer le media et augmenter son compteur">${lien_media.likes}</p>
             <i class="fas fa-heart"></i>
           </div>
         </div>
