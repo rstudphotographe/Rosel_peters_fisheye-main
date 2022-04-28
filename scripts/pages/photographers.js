@@ -1,3 +1,4 @@
+import { compteurLikes } from "./counter_like.js";
 import { Lightbox } from "./lightbox.js";
 import getDataPhotographers from "./service.js";
 
@@ -65,7 +66,7 @@ function try_popular(e) {
   }
   
 
-  //********************************tri par date
+  //********************************tri par date******************************
   const tryDate = document.querySelector('.date');
 
   tryDate.addEventListener("click", try_date);
@@ -105,6 +106,7 @@ const tryTitle = document.querySelector('.title_of_media');
   
   
   Lightbox.init();
+  compteurLikes();
 
 
 

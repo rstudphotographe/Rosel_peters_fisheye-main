@@ -9,22 +9,12 @@ export class Lightbox {
       link.addEventListener('click',(e) => {
         e.preventDefault()
         new Lightbox(link.getAttribute('href'), gallery);
-        // let lien = e.target.getAttribute('src').substr(-3,4);
-        // if ( lien === 'jpg') {
-        //   let bImg = `<img src="${e.target.getAttribute('src')}" alt=""/>`; 
-        //   //instanciation
-        //   new Lightbox(link.getAttribute('href'), gallery, bImg);
-        // } else  {
-          
-        //   let bVideo = `<video src="${e.target.getAttribute('src')}" alt=""/>`;
-
-        //   new Lightbox(link.getAttribute('href'), gallery, bVideo);
-       // }
+        
       } )
       )
     };
-    //                         Affiche le contenu de la lightbox
-    //constructor(url, images, balise) {
+    //******************************Affiche le contenu de la lightbox*************************************\\
+    
     constructor(url, images) {
       //rappel de la fonction creatBom
       this.element = this.creatDom(url);
@@ -33,9 +23,7 @@ export class Lightbox {
       this.onKeyup =this.onKeyup.bind(this);
       document.body.appendChild(this.element);
       document.addEventListener('keyup', this.onKeyup);
-      // console.log(url);
-      // console.log(images);
-      // console.log(balise);
+     
     };
 
     //choix image ou video
