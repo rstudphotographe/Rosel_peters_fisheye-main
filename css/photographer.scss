@@ -48,6 +48,7 @@ body {
 //******************************menu deroulant*****************************************
 .dropdown {
     display: flex;
+    width: max-content;
 }
 .try_asset {
     margin: 10px 35px;
@@ -66,9 +67,9 @@ body {
     z-index: 1001;
  }
  
-.menu_deroulant:hover {
-    width: 100px;
-}
+// .menu_deroulant:hover {
+//     width: 100px;
+// }
  .menu_deroulant  a {
      text-decoration: none;
     color: white;
@@ -93,10 +94,17 @@ li {
 
 .menu_deroulant:hover .sous_menu{
     display: block;
+    width: auto;
 
 }
 
+.popular i {
+    transition: transform 0.3s linear;
+}
 
+.dropdown:hover .popular i {
+    transform: rotate(-185deg);
+}
 
 
 //*****************bouton contact**********************
@@ -168,10 +176,12 @@ li {
     font-size: 16px;
 }
 
-.fa-heart{
+.like-icon{
     color: #901C1C;
 
 }
+
+
 
 //********************LIGHTBOX***************************
 .lightbox {

@@ -60,6 +60,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .try_asset {
@@ -78,10 +81,6 @@ body {
   display: inline-block;
   color: white;
   z-index: 1001;
-}
-
-.menu_deroulant:hover {
-  width: 100px;
 }
 
 .menu_deroulant a {
@@ -109,6 +108,19 @@ li {
 
 .menu_deroulant:hover .sous_menu {
   display: block;
+  width: auto;
+}
+
+.popular i {
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.dropdown:hover .popular i {
+  -webkit-transform: rotate(-185deg);
+          transform: rotate(-185deg);
 }
 
 .contact_button {
@@ -189,7 +201,7 @@ li {
   font-size: 16px;
 }
 
-.fa-heart {
+.like-icon {
   color: #901C1C;
 }
 

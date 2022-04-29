@@ -38,7 +38,7 @@ class Media {
           <div class= "container_like">
             <p class = "number_like"  
             aria-label="Coeur pour aimer le media et augmenter son compteur">${lien_media.likes}</p>
-            <i class="fas fa-heart like_icon"></i>
+            <i class="fas fa-heart like-icon"></i>
           </div>
         </div>
         </div>

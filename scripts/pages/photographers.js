@@ -43,11 +43,12 @@ displayPhotographerInfo()
 const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
 
-//**************************TRI de la gallerie***********************//
-//tri par popularité
-
 const tryPopular = document.querySelector('.popular');
+const tryDate = document.querySelector('.date');
+const tryTitle = document.querySelector('.title_of_media');
+//**************************TRI de la gallerie***********************//
 
+//tri par popularité
 tryPopular.addEventListener("click", try_popular);
 function try_popular(e) {
   e.preventDefault();
@@ -67,8 +68,6 @@ function try_popular(e) {
   
 
   //********************************tri par date******************************
-  const tryDate = document.querySelector('.date');
-
   tryDate.addEventListener("click", try_date);
   function try_date(e) {
     e.preventDefault();
@@ -84,9 +83,7 @@ function try_popular(e) {
     new Media(allMediaPhotographer, onePhotographe);
   }
 
-//***********************TRI par Titre************************ **/
-const tryTitle = document.querySelector('.title_of_media');
-
+//***********************TRI par Titre**************************/
   tryTitle.addEventListener("click", try_title);
   function try_title(e) {
     e.preventDefault();
