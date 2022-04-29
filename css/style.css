@@ -403,6 +403,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .try_asset {
@@ -446,6 +449,11 @@ li {
   display: block;
 }
 
+.menu_deroulant:hover .sous_menu {
+  display: block;
+  width: auto;
+}
+
 .popular i {
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
@@ -453,7 +461,7 @@ li {
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
-.dropdown:active .popular i {
+.dropdown:hover .popular i {
   -webkit-transform: rotate(-185deg);
           transform: rotate(-185deg);
 }
@@ -632,6 +640,9 @@ li {
           justify-content: space-between;
   padding: 35px;
   margin: auto;
+  z-index: 1002;
+  position: fixed;
+  background-color: floralwhite;
 }
 
 .modal header {

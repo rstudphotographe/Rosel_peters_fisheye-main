@@ -47,10 +47,41 @@
             <img src="assets/icons/close.svg" onclick="closeModal()" />
           </header>
           <form>
-            <div>
-              <label>Prénom</label>
-              <input/>
-            </div>
+            <div
+            class="formData">
+            <label>Prénom</label><br>
+            <input
+              class="text-control"
+              type="text"
+              id="first"
+              name="first"
+              
+            /><small class="small1"></small><br>
+          </div>
+          <div
+            class="formData">
+            <label>Nom</label><br>
+            <input
+              class="text-control"
+              type="text"
+              id="last"
+              name="last"
+              
+            /><br>
+            <small class="small2"></small>
+          </div>
+          <div
+            class="formData">
+            <label>E-mail</label><br>
+            <input
+              class="text-control"
+              type="email"
+              id="email"
+              name="email"
+              
+            /><br>
+            <small class="small3"></small>
+          </div>
             <button class="contact_button">Envoyer</button>
           </form>
         </div>
@@ -58,6 +89,7 @@
       <script src="scripts/utils/contactForm.js"></script>
       <script  src="scripts/factories/media.js" ></script>
       <script type="module" src="scripts/pages/photographers.js" ></script>
+      <script src="scripts/pages/modal.js"></script>
       <footer class="globalTotalLike">
         
       </footer>

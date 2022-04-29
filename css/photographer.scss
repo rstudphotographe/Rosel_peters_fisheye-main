@@ -5,7 +5,9 @@ body {
 
 #contact_modal {
     display: none;
+    
 }
+
 .logo {
     margin-left: 35px;
 }
@@ -255,13 +257,15 @@ cursor: pointer;
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 35px;
-    margin: auto;
+    top: 50px;
+   left: 290px;
+    z-index: 1002;
+
 }
 
 .modal header {
