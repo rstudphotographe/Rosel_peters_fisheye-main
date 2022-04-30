@@ -15,7 +15,7 @@ export const compteurLikes = () => {
 
     // accumulateur + valeur courante en l'additionnant
     totalLikes = totalLikes.reduce((accumulValue, currentValue) => accumulValue + currentValue);    
-    totalLike.innerHTML = `${totalLikes} / <i class="fas fa-heart"></i>`;
+    totalLike.innerHTML = `${totalLikes} / <i class="fas fa-heart heart_foot"></i>`;
   };
   newTotalLike();
 

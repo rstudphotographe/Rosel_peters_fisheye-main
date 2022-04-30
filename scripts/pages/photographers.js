@@ -33,6 +33,11 @@ const displayPhotographerInfo = () => {
     </div>
       <button class="contact_button" id="contact" onclick="displayModal()">Contactez-moi</button>
       <img class="img_photographer" src="assets/Photographers/Photographers_ID_Photos/${onePhotographe.portrait}" alt="${onePhotographe.name}">
+      <footer >
+      <div class="globalTotalLike">
+      </div>
+        <h4 class="name_footer">${onePhotographe.name}</h4>
+      </footer>
       ` 
 }
 displayPhotographerInfo()
