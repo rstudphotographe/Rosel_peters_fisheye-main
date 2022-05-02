@@ -25,6 +25,7 @@ export const compteurLikes = () => {
   buttons.forEach(button =>{ 
    let nbrLike = button.parentElement.children[0];
    let memoryLike = nbrLike.innerText;
+   //memorise le nombre de like
    function newLike() {
      nbrLike.innerText = `${memoryLike}`;
     }
