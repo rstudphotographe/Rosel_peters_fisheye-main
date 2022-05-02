@@ -482,6 +482,10 @@ li {
   margin-left: 50px;
 }
 
+.contact_button:hover {
+  background: #DB8876;
+}
+
 .container_info {
   margin: 0 20px;
 }
@@ -546,6 +550,14 @@ li {
 
 .like-icon {
   color: #901C1C;
+  border: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn_like {
+  border: none;
+  background-color: transparent;
 }
 
 .lightbox {
@@ -638,8 +650,8 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: -1360px;
-  margin-left: 20px;
+  margin-top: -1300px;
+  margin-left: 315px;
   position: relative;
   z-index: 1002;
 }
@@ -657,10 +669,10 @@ li {
   margin: 0px 25px;
 }
 
-.modal header h2 {
-  font-size: 40px;
+.modal header .contact_photo {
+  font-size: 25px;
   font-weight: normal;
-  text-align: center;
+  margin: 0px 20px;
 }
 
 form {
@@ -675,13 +687,14 @@ form {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 950px;
+  height: 690px;
+  margin: 50px;
 }
 
 form label {
   color: #312E2E;
   font-size: 26px;
-  margin: 0px 17px;
+  margin: -15px 17px;
 }
 
 form div {
@@ -696,7 +709,6 @@ form div {
   -webkit-box-align: self-start;
       -ms-flex-align: self-start;
           align-items: self-start;
-  margin-bottom: 26px;
 }
 
 form input {
@@ -710,6 +722,22 @@ form input {
 .text_control_message {
   width: 370px;
   height: 210px;
+}
+
+.send_button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901C1C;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  margin-top: -15px;
+  margin-left: 19px;
 }
 
 footer {
@@ -732,6 +760,10 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 500;
+}
+
+.heart_foot {
+  margin: 0;
 }
 
 body {

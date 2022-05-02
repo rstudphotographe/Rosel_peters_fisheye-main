@@ -8,6 +8,7 @@ body {
     
 }
 
+
 .logo {
     margin-left: 35px;
 }
@@ -98,6 +99,7 @@ li {
     display: block;
     width: auto;
 
+
 }
 
 .popular i {
@@ -124,6 +126,11 @@ li {
     position: relative;
     margin-top: 130px;
     margin-left: 50px;
+}
+
+.contact_button:hover {
+    background: #DB8876;
+
 }
 
 .container_info {
@@ -180,8 +187,17 @@ li {
 
 .like-icon{
     color: #901C1C;
+    border: white;
+    background-color: transparent;
+    cursor: pointer;
 
 }
+
+.btn_like {
+    border: none;
+    background-color: transparent;
+}
+
 
 
 
@@ -203,19 +219,18 @@ li {
 
 .lightbox_next,
 .lightbox_prev{
-background-color: transparent;
-color: #901C1C;
-border: none;
-font-size: 25px;
-position: fixed;
-top: 50%;
-left: 0;
-margin-top: -16px;
-z-index: 1002;
-width: 40px;
-height: 28px;
-cursor: pointer;
-
+    background-color: transparent;
+    color: #901C1C;
+    border: none;
+    font-size: 25px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    margin-top: -16px;
+    z-index: 1002;
+    width: 40px;
+    height: 28px;
+    cursor: pointer;
 }
 
 .lightbox_prev {
@@ -266,7 +281,6 @@ cursor: pointer;
     margin-left: 315px;
     position: relative;
     z-index: 1002;
-
 }
 
 .modal header {
@@ -280,10 +294,10 @@ cursor: pointer;
     margin: 0px 25px;
 }
 
-.modal header h2 {
-    font-size: 40px;
+.modal header .contact_photo {
+    font-size: 25px;
     font-weight: normal;
-    text-align: center;
+    margin: 0px 20px;
 }
 
 form {
@@ -292,6 +306,7 @@ form {
     flex-direction: column;
     align-items: flex-start;
     height: 690px;
+    margin: 50px;
 }
 
 form label {
@@ -306,7 +321,7 @@ form div {
     flex-direction: column;
     width: 100%;
     align-items: self-start;
-    margin-bottom: 26px;
+    
 }
 
 form input {

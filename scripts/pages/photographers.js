@@ -5,7 +5,7 @@ import getDataPhotographers from "./service.js";
 
 //recuperer et inserer l'id du photographe
 const currentId = Number(document.location.href.split("=")[1]);
-
+const contact = document.querySelector(".contact_photo");
 //stocker les données
 const {photographers, medias} = await getDataPhotographers();
 
@@ -41,6 +41,9 @@ const displayPhotographerInfo = () => {
       ` 
 }
 displayPhotographerInfo()
+
+//affiche le nom du photographe dans la modal
+contact.innerHTML = `<div class="btn_contact"><p>contactez-moi</p> <p class="contact_name">${onePhotographe.name}</p></div>`;
 
 //*******************************************************************************************************************************************************//
 
@@ -109,6 +112,7 @@ function try_popular(e) {
   
   Lightbox.init();
   compteurLikes();
+  
 
 
 

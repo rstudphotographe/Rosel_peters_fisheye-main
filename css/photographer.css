@@ -139,6 +139,10 @@ li {
   margin-left: 50px;
 }
 
+.contact_button:hover {
+  background: #DB8876;
+}
+
 .container_info {
   margin: 0 20px;
 }
@@ -203,6 +207,14 @@ li {
 
 .like-icon {
   color: #901C1C;
+  border: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn_like {
+  border: none;
+  background-color: transparent;
 }
 
 .lightbox {
@@ -314,10 +326,10 @@ li {
   margin: 0px 25px;
 }
 
-.modal header h2 {
-  font-size: 40px;
+.modal header .contact_photo {
+  font-size: 25px;
   font-weight: normal;
-  text-align: center;
+  margin: 0px 20px;
 }
 
 form {
@@ -333,6 +345,7 @@ form {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 690px;
+  margin: 50px;
 }
 
 form label {
@@ -353,7 +366,6 @@ form div {
   -webkit-box-align: self-start;
       -ms-flex-align: self-start;
           align-items: self-start;
-  margin-bottom: 26px;
 }
 
 form input {
