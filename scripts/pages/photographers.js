@@ -1,5 +1,4 @@
 import { compteurLikes } from "./counter_like.js";
-import { selectedChoiceHidden } from "./dropdown.js";
 import { Lightbox } from "./lightbox.js";
 import getDataPhotographers from "./service.js";
 
@@ -112,7 +111,6 @@ function try_popular(e) {
   
   Lightbox.init();
   compteurLikes();
-  selectedChoiceHidden();
   
 
 

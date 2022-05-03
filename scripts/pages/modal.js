@@ -1,6 +1,8 @@
 const first = document.getElementById ("first");
 const last = document.getElementById ('last');
 const email = document.getElementById ('email');
+const modal = document.querySelector('.close_modal')
+
 
 first.addEventListener('change', function(){
     validFirst(this);

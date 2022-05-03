@@ -70,9 +70,7 @@ body {
     z-index: 1001;
  }
  
-// .menu_deroulant:hover {
-//     width: 100px;
-// }
+
  .menu_deroulant  a {
      text-decoration: none;
     color: white;
@@ -103,7 +101,7 @@ li {
 
 }
 
-.popular i {
+.fleche_haut {
     transition: transform 0.3s linear;
 }
 
