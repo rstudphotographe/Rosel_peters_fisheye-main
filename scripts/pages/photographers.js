@@ -1,7 +1,7 @@
 import { compteurLikes } from "./counter_like.js";
+import { selectedChoiceHidden } from "./dropdown.js";
 import { Lightbox } from "./lightbox.js";
 import getDataPhotographers from "./service.js";
-
 
 //recuperer et inserer l'id du photographe
 const currentId = Number(document.location.href.split("=")[1]);
@@ -112,6 +112,7 @@ function try_popular(e) {
   
   Lightbox.init();
   compteurLikes();
+  selectedChoiceHidden();
   
 
 

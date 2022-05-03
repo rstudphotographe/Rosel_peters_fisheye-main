@@ -403,9 +403,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 .try_asset {
@@ -422,13 +419,11 @@ body {
   margin: 10px;
   padding: 15px;
   display: inline-block;
-  color: white;
   z-index: 1001;
 }
 
 .menu_deroulant a {
   text-decoration: none;
-  color: white;
   list-style-type: none;
 }
 
@@ -441,29 +436,11 @@ li {
   width: 115px;
 }
 
-.sous_menu a {
-  color: white;
-  padding: 20px;
-  margin: 11px -60px;
-  border-top: 1px solid white;
-  display: block;
-}
-
-.menu_deroulant:hover .sous_menu {
-  display: block;
-  width: auto;
-}
-
 .popular i {
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
-}
-
-.dropdown:hover .popular i {
-  -webkit-transform: rotate(-185deg);
-          transform: rotate(-185deg);
 }
 
 .contact_button {

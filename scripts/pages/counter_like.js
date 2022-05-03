@@ -10,17 +10,18 @@ export const compteurLikes = () => {
     let totalLikes = [];
     console.log(totalLikes);
     nbrLikes.forEach((counter) => {
+      //permet de manipuler les likes dans le json
       totalLikes.push(Number(counter.innerText));
     });
 
-    // accumulateur + valeur courante en l'additionnant
+    //va additionner tout les likes accumuler des differents medias
     totalLikes = totalLikes.reduce((accumulValue, currentValue) => accumulValue + currentValue);    
     totalLike.innerHTML = `${totalLikes}/<i class="fas fa-heart heart_foot"></i>`;
   };
   newTotalLike();
 
 
-
+// mettre un j'aime a un media
   let buttons = document.querySelectorAll('.btn_like');
   buttons.forEach(button =>{ 
    let nbrLike = button.parentElement.children[0];
