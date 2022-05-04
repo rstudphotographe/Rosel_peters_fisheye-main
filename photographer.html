@@ -29,8 +29,8 @@
           <ul class="menu_deroulant"tabindex="0">
             <li class="menu" ><a href=""  class="popular">Popularité <i class="fa-solid fa-angle-down fleche_haut"></i></a>
               <ul class="sous_menu">
-                <li tabindex="-1"><a href="" class="date">Date</a></li>
-                <li tabindex="-2"><a href="" class="title_of_media">titre</a></li>
+                <li tabindex="-"><a href="" class="date">Date</a></li>
+                <li tabindex="-0"><a href="" class="title_of_media">titre</a></li>
               </ul>
             </li>  
           </ul>
@@ -44,24 +44,25 @@
         <div class="modal">
           <header>
             <div class="contact_photo"></div>
-            <img class="close_modal" src="assets/icons/close.svg" onclick="closeModal()" />
+            <img tabindex="0" class="close_modal" src="assets/icons/close.svg"  />
           </header>
           <form>
-            <div tabindex="-1" class="formData">
+            <div class="formData">
               <label>Prénom</label><br>
               <input class="text-control"
                      type="text"
-                     id="first"
+                     id="first" 
+                     tabindex="0"
                      name="first"/>
                 <small class="small1">
 
                 </small><br>
             </div>
             <div
-            tabindex="1"
               class="formData">
               <label>Nom</label><br>
               <input
+              tabindex="0"
                 class="text-control"
                 type="text"
                 id="last"
