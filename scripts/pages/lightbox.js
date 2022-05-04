@@ -16,7 +16,7 @@ export class Lightbox {
     //******************************Affiche le contenu de la lightbox*************************************\\
     
     constructor(url, images) {
-      //rappel de la fonction creatBom
+      //rappel de la fonction creatDom
       this.element = this.creatDom(url);
       this.images = images;
       this.loadMedia(url);

@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <script src="https://kit.fontawesome.com/171a50d46a.js" crossorigin="anonymous"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -25,12 +26,11 @@
       <div class="dropdown">
         <p class="try_asset">Trier par</p>
         <div class="container_menu_deroulant">
-  
-          <ul class="menu_deroulant">
-            <li class="menu"><a href="" class="popular">Popularité <i class="fa-solid fa-angle-down fleche_haut"></i></a>
+          <ul class="menu_deroulant"tabindex="0">
+            <li class="menu" ><a href=""  class="popular">Popularité <i class="fa-solid fa-angle-down fleche_haut"></i></a>
               <ul class="sous_menu">
-                <li><a href="" class="date">Date</a></li>
-                <li><a href="" class="title_of_media">titre</a></li>
+                <li tabindex="-1"><a href="" class="date">Date</a></li>
+                <li tabindex="-2"><a href="" class="title_of_media">titre</a></li>
               </ul>
             </li>  
           </ul>
@@ -40,14 +40,14 @@
         
       </section> 
       
-      <div id="contact_modal">
+      <div id="contact_modal" aria-hidden="true" role="dialog" aria-labelledby="formulaire contct du photographe">
         <div class="modal">
           <header>
             <div class="contact_photo"></div>
             <img class="close_modal" src="assets/icons/close.svg" onclick="closeModal()" />
           </header>
           <form>
-            <div class="formData">
+            <div tabindex="-1" class="formData">
               <label>Prénom</label><br>
               <input class="text-control"
                      type="text"
@@ -58,6 +58,7 @@
                 </small><br>
             </div>
             <div
+            tabindex="1"
               class="formData">
               <label>Nom</label><br>
               <input
@@ -99,6 +100,6 @@
       <script src="scripts/utils/contactForm.js"></script>
       <script  src="scripts/factories/media.js" ></script>
       <script type="module" src="scripts/pages/photographers.js" ></script>
-      <script src="scripts/pages/modal.js"></script>
+      <script type="module" src="scripts/pages/modal.js"></script>
     </body>
     </html>

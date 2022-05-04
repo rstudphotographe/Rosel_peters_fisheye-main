@@ -398,6 +398,10 @@ form input {
   margin-left: 19px;
 }
 
+.small {
+  margin: 5px 20px;
+}
+
 footer {
   position: fixed;
   bottom: 0;

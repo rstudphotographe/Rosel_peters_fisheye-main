@@ -1,7 +1,6 @@
 import { compteurLikes } from "./counter_like.js";
 import { Lightbox } from "./lightbox.js";
 import getDataPhotographers from "./service.js";
-
 //recuperer et inserer l'id du photographe
 const currentId = Number(document.location.href.split("=")[1]);
 const contact = document.querySelector(".contact_photo");
@@ -53,6 +52,7 @@ const allMedia = new Media(allMediaPhotographer, onePhotographe)
 const tryPopular = document.querySelector('.popular');
 const tryDate = document.querySelector('.date');
 const tryTitle = document.querySelector('.title_of_media');
+
 //**************************TRI de la gallerie***********************//
 
 //tri par popularité

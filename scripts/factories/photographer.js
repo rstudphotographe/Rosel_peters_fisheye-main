@@ -39,5 +39,4 @@ export function photographerFactory(data) {
     }
     return { name, picture, getUserCardDOM }
 }
-//exemple d'inseetion html
 

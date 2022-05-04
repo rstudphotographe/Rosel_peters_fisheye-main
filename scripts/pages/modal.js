@@ -1,13 +1,11 @@
 const first = document.getElementById ("first");
 const last = document.getElementById ('last');
 const email = document.getElementById ('email');
-const modal = document.querySelector('.close_modal')
-
 
 first.addEventListener('change', function(){
-    validFirst(this);
-  });
-  //variable qui utiliser lors de la validation du formulaire
+  validFirst(this);
+});
+//variable qui utiliser lors de la validation du formulaire
   let validPrenom = false;
   const validFirst = function(inputFirst){
     let firstRegExp = new RegExp(
@@ -24,7 +22,7 @@ first.addEventListener('change', function(){
     } else {
       // insertion du style  si erreur lors de la saisi
         first.style.borderColor = 'red';
-        small.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du prénom';
+       
     }
   
   };
@@ -48,12 +46,12 @@ first.addEventListener('change', function(){
     } else {
       // insertion du style  si erreur lors de la saisi
       last.style.borderColor = 'red';
-      small.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du nom';
+     
     }
   };
   
   
-  //*****************verifiez la bonne saisi de l'emailvalidation Email******************************
+  //*****************verifiez la bonne saisi de l'emailvalidation ******************************
   email.addEventListener('change', function(){
     validEmail(this);
   });
@@ -65,11 +63,14 @@ first.addEventListener('change', function(){
     let testEmail = emailRegExp.test(inputEmail.value)
     let small = document.querySelector('.small3');
     if(testEmail) {
-        validMail = true;
+      validMail = true;
       small.innerHTML = '';
       email.style.borderColor = 'white';
     } else {
       email.style.borderColor = 'red';
-      small.innerHTML = 'Veuillez saisir un email valide';
+     
     }
   };
+  
+
+
