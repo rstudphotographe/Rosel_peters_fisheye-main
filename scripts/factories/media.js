@@ -24,7 +24,7 @@ class Media {
   }
   
   video(lien_media) {
-   const vidPhotographer = `<a href="${this.thumbs}${lien_media.video}"><video class = "asset_photographer" src= "${this.thumbs}/${lien_media.video}" alt="${lien_media.title}"/></a>`;
+   const vidPhotographer = `<a href="${this.thumbs}${lien_media.video}" aria-label="video"><video class = "asset_photographer" src= "${this.thumbs}/${lien_media.video}" title="${lien_media.title}"/></a>`;
     this.creationGallery(lien_media, vidPhotographer);
   }
 
@@ -37,8 +37,8 @@ class Media {
           <span class = "title_media">${lien_media.title}</span>
           <div class= "container_like">
             <p class = "number_like"  
-            aria-label="Coeur pour aimer le media et augmenter son compteur">${lien_media.likes}</p>
-            <button class="btn_like"><i class="fas fa-heart like-icon"></i></button>
+            aria-label="affiche le compteur de like">${lien_media.likes}</p>
+            <button class="btn_like" aria-label="Coeur pour aimer le media et augmenter son compteur" ><i class="fas fa-heart like-icon"></i></button>
           </div>
         </div>
         </div>

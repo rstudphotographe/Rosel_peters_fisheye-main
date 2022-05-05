@@ -7,12 +7,13 @@ export function photographerFactory(data) {
     function getUserCardDOM() {
         const article = document.createElement( 'article' );
         const img = document.createElement( 'img' );
-        const aElt = document.createElement( 'a' );
+        const lienElt = document.createElement( 'a' );
         img.setAttribute("src", picture);
-        aElt.setAttribute('href', `photographer.html?photographer=${id}` );
+        lienElt.setAttribute('href', `photographer.html?photographer=${id}` );
+        img.setAttribute(`alt`, `${name}`)
         
-        article.appendChild(aElt);
-        aElt.appendChild(img);
+        article.appendChild(lienElt);
+        lienElt.appendChild(img);
 
         const h2 = document.createElement( 'h2' );
         h2.textContent = name;
@@ -30,7 +31,7 @@ export function photographerFactory(data) {
         span.textContent = price ;
         article.appendChild(span);
 
-        const day = document.createElement ('h6')
+        const day = document.createElement ('h4')
         day.classList.add('day')
         day.textContent = "/jour";
         article.appendChild(day)

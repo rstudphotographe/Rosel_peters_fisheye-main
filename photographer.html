@@ -13,7 +13,7 @@
   <body>
     <header>
       <a href="index.html">
-        <img src="assets/images/logo.png" class="logo" />
+        <img src="assets/images/logo.png" class="logo"  alt="Logo fisheye"/>
 
       </a>
     </header>
@@ -40,16 +40,17 @@
         
       </section> 
       
-      <div id="contact_modal" aria-hidden="true" role="dialog" aria-labelledby="formulaire contct du photographe">
-        <div class="modal">
+      <div id="contact_modal" aria-hidden="true" role="dialog" aria-label="formulaire contct du photographe">
+        <div class="modal" aria-label="formulaire">
           <header>
             <div class="contact_photo"></div>
-            <img tabindex="0" class="close_modal" src="assets/icons/close.svg"  />
+            <img tabindex="0" class="close_modal" aria-label="ferme le formulaire" src="assets/icons/close.svg"  />
           </header>
           <form>
             <div class="formData">
               <label>Prénom</label><br>
               <input class="text-control"
+                     aria-label="entrer votre prenom"
                      type="text"
                      id="first" 
                      tabindex="0"
@@ -62,6 +63,7 @@
               class="formData">
               <label>Nom</label><br>
               <input
+              aria-label="entrer votre nom"
               tabindex="0"
                 class="text-control"
                 type="text"
@@ -75,6 +77,7 @@
             class="formData">
             <label>E-mail</label><br>
             <input
+            aria-label="entrer votre email"
               class="text-control"
               type="email"
               id="email"
@@ -87,13 +90,14 @@
           class="formData">
           <label>Message</label><br>
           <input 
+          aria-label="ecrivez votre message"
           class="text_control_message"
           type="text"
           id="message"
           name="message"
           /> <br>
         </div>
-            <button class="send_button">Envoyer</button>
+            <button class="send_button" aria-label="envoyer le formulaire">Envoyer</button>
           </form>
         </div>
       </div>

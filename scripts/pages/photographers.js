@@ -26,7 +26,7 @@ const displayPhotographerInfo = () => {
     infophotographe.innerHTML =  `
     <div class="info_photograph">
     <h1 class="name">${onePhotographe.name}</h1>
-    <p class="city_photographer">${onePhotographe.city}, ${onePhotographe.country}</p>
+    <h2 class="city_photographer">${onePhotographe.city}, ${onePhotographe.country}</h2>
       <p class="tag_photographer">${onePhotographe.tagline}</p>
     </div>
       <button class="contact_button" id="contact" onclick="displayModal()">Contactez-moi</button>
@@ -34,7 +34,7 @@ const displayPhotographerInfo = () => {
       <footer >
       <div class="globalTotalLike">
       </div>
-        <h4 class="name_footer">${onePhotographe.name}</h4>
+        <h4 class="name_footer">${onePhotographe.price}€ / jour</h4>
       </footer>
       ` 
 }
