@@ -5,6 +5,7 @@ function displayModal() {
     const modal = document.getElementById("contact_modal");
 	modal.style.display = "block";
     const first = document.getElementById ("first");
+    first.focus();
     open = true;
     
     // const last = document.getElementById ('last');
@@ -19,7 +20,12 @@ function closeModal() {
     open = false;
 }
 
+close.addEventListener('click', function (){
+    closeModal();
+})
 
+
+// ferme le formulaire avec 'echap'
 document.addEventListener('keyup', function (e){
     if (e.key === "Escape" && open === true) {
 
@@ -28,9 +34,6 @@ document.addEventListener('keyup', function (e){
 });
 
 
-close.addEventListener('click', function (){
-    closeModal();
-})
 
 
 //Fermeture de la modal apres envoi du formulaire

@@ -48,7 +48,7 @@ contact.innerHTML = `<div class="btn_contact"><p>contactez-moi</p> <p class="con
 // active la factory des médias dans media.js pour afficher les photos pour chaque photographe
 const allMedia = new Media(allMediaPhotographer, onePhotographe)
 
-
+// variable pour le tri
 const tryPopular = document.querySelector('.popular');
 const tryDate = document.querySelector('.date');
 const tryTitle = document.querySelector('.title_of_media');
@@ -104,7 +104,17 @@ function try_popular(e) {
     })
     document.querySelector('.container_gallery').innerHTML = '';
     new Media(allMediaPhotographer, onePhotographe);
-  }
+  };
+
+const menuDeroulant = document.querySelector('.menu_deroulant');
+const sousMenu = document.querySelector('.sous_menu')
+
+menuDeroulant.addEventListener('keypress', function(e){
+          if (e.key === 'Enter') {
+            sousMenu.style.display = 'block'
+          }
+})
+
   
   
   

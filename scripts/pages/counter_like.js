@@ -8,7 +8,6 @@ export const compteurLikes = () => {
   const newTotalLike = () => {
     // stocke le total des likes 
     let totalLikes = [];
-    console.log(totalLikes);
     nbrLikes.forEach((counter) => {
       //permet de manipuler les likes dans le json
       totalLikes.push(Number(counter.innerText));
@@ -21,12 +20,13 @@ export const compteurLikes = () => {
   newTotalLike();
 
 
-// mettre un j'aime a un media
+// 
   let buttons = document.querySelectorAll('.btn_like');
   buttons.forEach(button =>{ 
    let nbrLike = button.parentElement.children[0];
+   // incrémente le nouveau total de like
    let memoryLike = nbrLike.innerText;
-   //memorise le nombre de like
+   //memorise le nombre de like, met un  a un media
    function newLike() {
      nbrLike.innerText = `${memoryLike}`;
     }
@@ -44,5 +44,10 @@ export const compteurLikes = () => {
          }
        })});
      };
-
-
+// ajoute un like avec la touche entré      
+      document.addEventListener('keyup', function (e){
+       if (e.key === "Enter" && open === true) {
+  
+            newLike();
+       }
+  });

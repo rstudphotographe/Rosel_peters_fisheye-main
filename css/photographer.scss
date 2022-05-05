@@ -94,20 +94,20 @@ li {
     width: 135%;
 }
 
-.menu_deroulant:hover .sous_menu{
-    display: block;
-    width: auto;
+// .menu_deroulant:hover {
+//     display: block;
+//     width: auto;
 
 
-}
+// }
 
-.fleche_haut {
-    transition: transform 0.3s linear;
-}
+// .fleche_haut {
+//     transition: transform 0.3s linear;
+// }
 
-.dropdown:hover .popular i {
-    transform: rotate(-185deg);
-}
+// .dropdown:hover .popular i {
+//     transform: rotate(-185deg);
+// }
 
 
 //*****************bouton contact**********************
@@ -279,6 +279,7 @@ li {
     margin-top: -1300px;
     margin-left: 315px;
     position: relative;
+        height: 755px;
     z-index: 1002;
 }
 
@@ -348,7 +349,7 @@ form input {
     border-radius: 5px;
     cursor: pointer;
     position: relative;
-    margin-top: -15px;
+    margin-top: 10px;
     margin-left: 19px;
 }
 
