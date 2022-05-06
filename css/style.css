@@ -421,7 +421,7 @@ body {
   border-radius: 5px;
   margin: 10px;
   padding: 15px;
-  display: inline-block;
+  display: block;
   color: white;
   z-index: 1001;
 }
@@ -438,16 +438,21 @@ li {
 
 .sous_menu {
   display: none;
-  width: 115px;
+  width: 15px;
 }
 
 .sous_menu a {
   color: white;
-  padding: 15px;
+  padding: 10px;
   margin: 20px 26px 20px -45px;
   border-top: 1px solid white;
   display: block;
   width: 135%;
+}
+
+.menu_deroulant:hover .sous_menu {
+  display: block;
+  width: auto;
 }
 
 .fleche_haut {
@@ -455,6 +460,11 @@ li {
   transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.dropdown:hover .popular i {
+  -webkit-transform: rotate(-185deg);
+          transform: rotate(-185deg);
 }
 
 .contact_button {

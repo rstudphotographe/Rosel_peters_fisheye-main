@@ -106,15 +106,27 @@ function try_popular(e) {
     new Media(allMediaPhotographer, onePhotographe);
   };
 
-const menuDeroulant = document.querySelector('.menu_deroulant');
+const menuDeroulant = document.querySelector('.container_menu_deroulant');
 const sousMenu = document.querySelector('.sous_menu')
 
 menuDeroulant.addEventListener('keypress', function(e){
-          if (e.key === 'Enter') {
+  if (e.key === 'Enter') {  
             sousMenu.style.display = 'block'
+           
+          }else {
+            (e.key === 'Echap')
+            sousMenu.style.display = 'none'
           }
-})
 
+});
+
+menuDeroulant.addEventListener('keyup', function(e){
+  if (e.key === 'Escape') {  
+            sousMenu.style.display = 'none' 
+          }
+          
+
+});
   
   
   

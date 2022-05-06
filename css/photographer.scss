@@ -65,7 +65,7 @@ body {
     border-radius: 5px;
     margin: 10px;
     padding: 15px;
-    display: inline-block;
+    display: block;
     color: white;
     z-index: 1001;
  }
@@ -82,32 +82,30 @@ li {
 }
 .sous_menu {
     display: none;
-    width: 115px;
+    width:  15px;
 }
 
 .sous_menu a {
     color: white;
-    padding: 15px;
+    padding: 10px;
     margin: 20px 26px 20px -45px;
     border-top: 1px solid white;
     display: block;
     width: 135%;
 }
 
-// .menu_deroulant:hover {
-//     display: block;
-//     width: auto;
+ .menu_deroulant:hover .sous_menu {
+     display: block;
+     width: auto;
+ }
 
+ .fleche_haut {
+     transition: transform 0.3s linear;
+ }
 
-// }
-
-// .fleche_haut {
-//     transition: transform 0.3s linear;
-// }
-
-// .dropdown:hover .popular i {
-//     transform: rotate(-185deg);
-// }
+ .dropdown:hover .popular i {
+     transform: rotate(-185deg);
+}
 
 
 //*****************bouton contact**********************

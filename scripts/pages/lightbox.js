@@ -13,6 +13,7 @@ export class Lightbox {
       } )
       )
     };
+    
     //******************************Affiche le contenu de la lightbox*************************************\\
     
     constructor(url, images) {
