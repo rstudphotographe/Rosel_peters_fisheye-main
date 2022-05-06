@@ -7,19 +7,14 @@ const contact = document.querySelector(".contact_photo");
 //stocker les données
 const {photographers, medias} = await getDataPhotographers();
 
-  
-//recuperer les données d'un photographe 
-const onePhotographe = photographers.filter(photographer => currentId === photographer.id)[0];
-
-//recuperer les medias d'un photographe
-const allMediaPhotographer = medias.filter(media => currentId === media.photographerId)
-
-
-//*****************************************************************************************************/
 //********************************Header du photographe********************************************* */
 
-//variable pour sélectionner un element html
+//variable pour sélectionner un element html qui affichera les infos du photographe
 const infophotographe = document.querySelector(".photograph-header");
+//recuperer les données d'un photographe 
+const onePhotographe = photographers.filter(photographer => currentId === photographer.id)[0];
+//recuperer les medias d'un photographe
+const allMediaPhotographer = medias.filter(media => currentId === media.photographerId)
 
 //Afficher les infos dans  photographer.html
 const displayPhotographerInfo = () => {
@@ -66,12 +61,12 @@ function try_popular(e) {
       else {
         return +1
       }
-    })
+    });
     // vide la page des anciens médias
     document.querySelector('.container_gallery').innerHTML = '';
     // affiche les medias avec le tri effectuer
     new Media(allMediaPhotographer, onePhotographe);
-  }
+  };
   
 
   //********************************tri par date******************************
@@ -85,10 +80,10 @@ function try_popular(e) {
       else{
         return+1
       }
-    })
+    });
     document.querySelector('.container_gallery').innerHTML = '';
     new Media(allMediaPhotographer, onePhotographe);
-  }
+  };
 
 //***********************TRI par Titre**************************/
   tryTitle.addEventListener("click", try_title);
@@ -101,14 +96,16 @@ function try_popular(e) {
       else{
         return+1
       }
-    })
+    });
     document.querySelector('.container_gallery').innerHTML = '';
     new Media(allMediaPhotographer, onePhotographe);
   };
 
+  //****************************************************************************** */
 const menuDeroulant = document.querySelector('.container_menu_deroulant');
 const sousMenu = document.querySelector('.sous_menu')
 
+// ouvre le dopdown au clavier
 menuDeroulant.addEventListener('keypress', function(e){
   if (e.key === 'Enter') {  
             sousMenu.style.display = 'block'
@@ -120,6 +117,7 @@ menuDeroulant.addEventListener('keypress', function(e){
 
 });
 
+// ferme le dopdown au clavier
 menuDeroulant.addEventListener('keyup', function(e){
   if (e.key === 'Escape') {  
             sousMenu.style.display = 'none' 

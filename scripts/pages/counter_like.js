@@ -2,7 +2,7 @@
 export const compteurLikes = () => {
   const nbrLikes = document.querySelectorAll('.number_like');
   const totalLike = document.querySelector('.globalTotalLike');
-  const iconHeart = document.querySelector('.like-icon');
+  //const iconHeart = document.querySelector('.like-icon');
     
     // Permet d'actualiser le nouveau total global selon like ou dislike sur un media
   const newTotalLike = () => {
