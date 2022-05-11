@@ -1,5 +1,6 @@
 //Pour gerer l'icrementation et la décrementation des likes par media et le total des likes
 export const compteurLikes = () => {
+  console.log('interne');
   const nbrLikes = document.querySelectorAll('.number_like');
   const totalLike = document.querySelector('.globalTotalLike');
   //const iconHeart = document.querySelector('.like-icon');
@@ -20,17 +21,20 @@ export const compteurLikes = () => {
   newTotalLike();
 
 
-// 
+// Ajouter la fonction a chaque like dans les médias
   let buttons = document.querySelectorAll('.btn_like');
   buttons.forEach(button =>{ 
    let nbrLike = button.parentElement.children[0];
+//console.log(nbrLike);
    // incrémente le nouveau total de like
    let memoryLike = nbrLike.innerText;
+
    //memorise le nombre de like, met un  a un media
    function newLike() {
      nbrLike.innerText = `${memoryLike}`;
     }
     button.addEventListener("click", () => {
+      console.log('bonjour');
          if (nbrLike) {
 
            memoryLike++;
@@ -44,10 +48,12 @@ export const compteurLikes = () => {
          }
        })});
      };
+
+
 // ajoute un like avec la touche entré      
       document.addEventListener('keyup', function (e){
        if (e.key === "Enter" && open === true) {
   
-            newLike();
+             newLike();
        }
   });

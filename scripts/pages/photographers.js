@@ -66,6 +66,9 @@ function try_popular(e) {
     document.querySelector('.container_gallery').innerHTML = '';
     // affiche les medias avec le tri effectuer
     new Media(allMediaPhotographer, onePhotographe);
+    Lightbox.init();
+    compteurLikes();
+
   };
   
 
@@ -83,6 +86,8 @@ function try_popular(e) {
     });
     document.querySelector('.container_gallery').innerHTML = '';
     new Media(allMediaPhotographer, onePhotographe);
+    compteurLikes();
+    Lightbox.init();
   };
 
 //***********************TRI par Titre**************************/
@@ -99,6 +104,8 @@ function try_popular(e) {
     });
     document.querySelector('.container_gallery').innerHTML = '';
     new Media(allMediaPhotographer, onePhotographe);
+    compteurLikes();
+    Lightbox.init();
   };
 
   //****************************************************************************** */
@@ -131,7 +138,7 @@ menuDeroulant.addEventListener('keyup', function(e){
   
   Lightbox.init();
   compteurLikes();
-  
+  console.log('coul');
 
 
 
