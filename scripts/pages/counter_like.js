@@ -1,11 +1,10 @@
 //Pour gerer l'icrementation et la décrementation des likes par media et le total des likes
 export const compteurLikes = () => {
-  console.log('interne');
+ 
   const nbrLikes = document.querySelectorAll('.number_like');
   const totalLike = document.querySelector('.globalTotalLike');
-  //const iconHeart = document.querySelector('.like-icon');
     
-    // Permet d'actualiser le nouveau total global selon like ou dislike sur un media
+// Permet d'actualiser le nouveau total global selon like ou dislike sur un media
   const newTotalLike = () => {
     // stocke le total des likes 
     let totalLikes = [];
@@ -25,7 +24,7 @@ export const compteurLikes = () => {
   let buttons = document.querySelectorAll('.btn_like');
   buttons.forEach(button =>{ 
    let nbrLike = button.parentElement.children[0];
-//console.log(nbrLike);
+
    // incrémente le nouveau total de like
    let memoryLike = nbrLike.innerText;
 
@@ -34,15 +33,14 @@ export const compteurLikes = () => {
      nbrLike.innerText = `${memoryLike}`;
     }
     button.addEventListener("click", () => {
-      console.log('bonjour');
-         if (nbrLike) {
-
-           memoryLike++;
+         if (button.classList.contains("unliked")) {
+           button.classList.remove("unliked")
+           memoryLike--;
            newLike();
            newTotalLike();
           } else {
-            
-            memoryLike--;
+            button.classList.add("unliked")
+            memoryLike++;
             newLike();
             newTotalLike();
          }

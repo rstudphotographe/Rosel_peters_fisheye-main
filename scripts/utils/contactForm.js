@@ -44,6 +44,32 @@ modal.style.display = "none";
 
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let prenom = document.getElementById('first');
+// let nom = document.getElementById('last');
+// let mail = document.getElementById('email');
+// let msg = document.getElementById('message');
+// console.log(
+//     prenom.value,
+//     nom.value,
+//     mail.value,
+//     msg.value
+//     );
+
+
+
 // window.addEventListener('keydown', function (e){
 //     if (e.key === "Escape"=== 'Esc'){
 //         closeModal(e)

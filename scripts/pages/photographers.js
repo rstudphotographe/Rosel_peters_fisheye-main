@@ -1,9 +1,11 @@
 import { compteurLikes } from "./counter_like.js";
 import { Lightbox } from "./lightbox.js";
 import getDataPhotographers from "./service.js";
+
 //recuperer et inserer l'id du photographe
 const currentId = Number(document.location.href.split("=")[1]);
 const contact = document.querySelector(".contact_photo");
+
 //stocker les données
 const {photographers, medias} = await getDataPhotographers();
 
@@ -11,8 +13,10 @@ const {photographers, medias} = await getDataPhotographers();
 
 //variable pour sélectionner un element html qui affichera les infos du photographe
 const infophotographe = document.querySelector(".photograph-header");
+
 //recuperer les données d'un photographe 
 const onePhotographe = photographers.filter(photographer => currentId === photographer.id)[0];
+
 //recuperer les medias d'un photographe
 const allMediaPhotographer = medias.filter(media => currentId === media.photographerId)
 
@@ -20,8 +24,8 @@ const allMediaPhotographer = medias.filter(media => currentId === media.photogra
 const displayPhotographerInfo = () => {
     infophotographe.innerHTML =  `
     <div class="info_photograph">
-    <h1 class="name">${onePhotographe.name}</h1>
-    <h2 class="city_photographer">${onePhotographe.city}, ${onePhotographe.country}</h2>
+      <h1 class="name">${onePhotographe.name}</h1>
+      <h2 class="city_photographer">${onePhotographe.city}, ${onePhotographe.country}</h2>
       <p class="tag_photographer">${onePhotographe.tagline}</p>
     </div>
       <button class="contact_button" id="contact" onclick="displayModal()">Contactez-moi</button>
@@ -71,7 +75,6 @@ function try_popular(e) {
 
   };
   
-
   //********************************tri par date******************************
   tryDate.addEventListener("click", try_date);
   function try_date(e) {
@@ -132,13 +135,10 @@ menuDeroulant.addEventListener('keyup', function(e){
           
 
 });
-  
-  
-  
-  
+ 
   Lightbox.init();
   compteurLikes();
-  console.log('coul');
+  
 
 
 
